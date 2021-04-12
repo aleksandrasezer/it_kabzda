@@ -6,8 +6,12 @@ import {Rating} from "./components/Rating/Rating";
 function App() {
     return (
         <div>
+            <>Article 1</>
             <Rating />
-            <Accordion />
+            <Accordion title={"Menu"} collapsed={true}/>
+            <Accordion title={"Classes"} collapsed={false}/>
+            <>Article 2</>
+            <Rating />
         </div>
     );
 }
