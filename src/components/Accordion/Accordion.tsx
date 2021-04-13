@@ -1,34 +1,25 @@
-import React from "react";
+import React, {useState} from "react";
 
 type AccordionPropsType = {
     title: string
-    collapsed: boolean
-}
-type AccordionTitlePropsType = {
-    title: string
-}
-type AccordionBodyPropsType = {
-    collapsed: boolean
 }
 
 export function Accordion(props: AccordionPropsType) {
+    const [collapsed,setCollapsed] = useState(false)
     return (
         <div>
             <AccordionTitle title={props.title}/>
-            <AccordionBody collapsed={props.collapsed}/>
+            <button onClick={() => {setCollapsed(!collapsed)}}>TOGGLE</button>
+            {!collapsed && <AccordionBody /> }
+
         </div>
     )
 }
 
-function AccordionTitle(props: AccordionTitlePropsType) {
+function AccordionTitle(props: AccordionPropsType) {
     return <h3>{props.title}</h3>
 }
-
-function AccordionBody(props: AccordionBodyPropsType) {
-    console.log('fgh')
-    if (props.collapsed) {
-        return <> </>
-    } else
+function AccordionBody() {
         return <ul>
             <li>1</li>
             <li>2</li>
