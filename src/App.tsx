@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import './App.css';
+import {UncontrolledAccordion} from "./components/UncontrolledAccordeon/UncontrolledAccordion";
+import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
+import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
+import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {Accordion} from "./components/Accordion/Accordion";
-import {UncontrolledRating} from "./components/Rating/UncontrolledRating";
 import {OnOff} from "./components/OnOff/OnOff";
-import {ControlledRating, RatingValueType} from "./components/Rating/ControlledRating";
-import {ControlledAccordion} from "./components/Accordion/ControlledAccordion";
-import {ControlledOnOff} from "./components/OnOff/ControlledOnOff";
 
 function App() {
     const [ratingValue, setRatingValue] = useState<RatingValueType>(0)
@@ -14,14 +14,14 @@ function App() {
     return (
         <div className={"app"}>
             <>Article 1</>
-            <ControlledRating value={ratingValue} onClickEvent={setRatingValue}/>
+            <Rating value={ratingValue} onClickEvent={setRatingValue}/>
             <UncontrolledRating/>
-            <ControlledOnOff on={switchOn} onClickEvent={setSwitchOn}/>
-            <OnOff/>
-            <Accordion title={"Menu"}/>
-            <ControlledAccordion title={"Notes"}
-                                 onClickEvent={() => {setCollapsedValue(!collapsedValue)}}
-                                 collapsed={collapsedValue}/>
+            <OnOff on={switchOn} onClickEvent={setSwitchOn}/>
+            <UncontrolledOnOff/>
+            <UncontrolledAccordion title={"Menu"}/>
+            <Accordion title={"Notes"}
+                       onClickEvent={() => {setCollapsedValue(!collapsedValue)}}
+                       collapsed={collapsedValue}/>
         </div>
     );
 }

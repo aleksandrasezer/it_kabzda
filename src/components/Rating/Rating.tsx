@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import s from "./Rating.module.css";
 
 export type RatingValueType = 0 | 1 | 2 | 3 | 4 | 5
@@ -7,7 +7,7 @@ type RatingPropsType = {
     onClickEvent: (value:RatingValueType) => void
 }
 
-export function ControlledRating(props: RatingPropsType) {
+export function Rating(props: RatingPropsType) {
     return (
         <div>
             <Star selected={props.value > 0} onClickEvent={props.onClickEvent} value={1}/>
