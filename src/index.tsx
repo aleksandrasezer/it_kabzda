@@ -4,9 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+export type AccOptions = {id:number,fruit:string}[]
+const accOptions = [{id:1,fruit:'apple'},{id:2,fruit:'plum'},{id:3,fruit:'pear'}]
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App accOptions={accOptions}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

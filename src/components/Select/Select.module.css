@@ -1,0 +1,21 @@
+.selectContainer {
+    width: 130px;
+/*    border: 2px solid darkslateblue;*/
+    margin: 0 auto;
+    color:white;
+}
+.value {
+    background-color: mediumslateblue;
+    border: 2px solid darkslateblue;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+.options {
+    padding: 10px;
+    border: 2px solid darkslateblue;
+    border-top: 1px solid darkslateblue;
+    background-color: lightgrey;
+}
+.options:hover {
+    background-color: slategray;
+}
