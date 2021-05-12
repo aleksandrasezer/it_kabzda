@@ -5,6 +5,7 @@ import {Accordion} from "./components/Accordion/Accordion";
 import {OnOff} from "./components/OnOff/OnOff";
 import {FruitsType, Select} from "./components/Select/Select";
 import {AccOptions} from "./index";
+import {Counter} from "./components/Counter/Counter";
 
 
 
@@ -24,6 +25,7 @@ function App(props: {accOptions: AccOptions}) {
                        collapsed={collapsedValue}
                        accOptions={props.accOptions}/>
                        <Select fruits={fruits}/>
+                       <Counter />
         </div>
     );
 }

@@ -6,7 +6,8 @@ type SelectPropsType = {
 }
 export type FruitsType = { id: number, title: string }[]
 
-export function Select(props: SelectPropsType) {
+function SecretSelect(props: SelectPropsType) {
+    console.log('Select is being rendered')
     const [open, setOpen] = useState(false)
     const [value, setValue] = useState('choose one')
     return (
@@ -22,3 +23,6 @@ export function Select(props: SelectPropsType) {
         </div>
     )
 }
+
+export const Select = React.memo(SecretSelect)
+
