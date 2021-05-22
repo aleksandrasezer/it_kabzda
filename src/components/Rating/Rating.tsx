@@ -32,10 +32,12 @@ function Star(props: StarPropsType) {
     return <span className={s.star} onClick={() => {props.onClickEvent(props.value)}}>{
         props.selected ?
             <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv0HCg7VrOsoL6cKwOu-H2Rt7DMn6CTkiwoQ&usqp=CAU"/>
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv0HCg7VrOsoL6cKwOu-H2Rt7DMn6CTkiwoQ&usqp=CAU"
+                alt='selected_star'/>
             :
             <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBQER6JhXFPa2aXEJ7QWrecyBdlNDt5wySWA&usqp=CAU"/>
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBQER6JhXFPa2aXEJ7QWrecyBdlNDt5wySWA&usqp=CAU"
+                alt='empty_star'/>
     }
     </span>
 }

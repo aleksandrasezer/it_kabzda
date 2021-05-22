@@ -36,7 +36,7 @@ function AccordionBody(props: AccordionBodyType) {
     return (
         <ul>
             {props.accOptions.map((f) =>
-                <li onClick={(e) => alert(`I want ${f.fruit}, please`)}>{f.id}</li>)}
+                <li key={f.id} onClick={(e) => alert(`I want ${f.fruit}, please`)}>{f.id}</li>)}
     </ul>
     )
 }
