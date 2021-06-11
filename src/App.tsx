@@ -7,6 +7,7 @@ import {FruitsType, Select} from "./components/Select/Select";
 import {AccOptions} from "./index";
 import {Counter} from "./components/Counter/Counter";
 import {Usememo} from "./components/usememo/UseMemo";
+import {Clock} from "./components/Clock";
 
 
 function App(props: { accOptions: AccOptions }) {
@@ -29,6 +30,7 @@ function App(props: { accOptions: AccOptions }) {
             <Select fruits={fruits}/>
             <Counter/>
             <Usememo fruits={fruits}/>
+            <Clock />
         </div>
     );
 }
